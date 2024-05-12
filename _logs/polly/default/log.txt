@@ -1,0 +1,71 @@
+Execute command: [
+  `which`
+  `cmake`
+]
+[/home/orkhan/Orkhan1524/workspace/projects/lab07]> "which" "cmake"
+/usr/bin/cmake
+Execute command: [
+  `cmake`
+  `--version`
+]
+[/home/orkhan/Orkhan1524/workspace/projects/lab07]> "cmake" "--version"
+cmake version 3.22.1
+
+CMake suite maintained and supported by Kitware (kitware.com/cmake).
+Execute command: [
+  `cmake`
+  `-H.`
+  `-B/home/orkhan/Orkhan1524/workspace/projects/lab07/_builds/default`
+  `-DCMAKE_TOOLCHAIN_FILE=/home/orkhan/Orkhan1524/workspace/projects/lab07/tools/polly/default.cmake`
+  `-DCMAKE_INSTALL_PREFIX=/home/orkhan/Orkhan1524/workspace/projects/lab07/_install/default`
+]
+[/home/orkhan/Orkhan1524/workspace/projects/lab07]> "cmake" "-H." "-B/home/orkhan/Orkhan1524/workspace/projects/lab07/_builds/default" "-DCMAKE_TOOLCHAIN_FILE=/home/orkhan/Orkhan1524/workspace/projects/lab07/tools/polly/default.cmake" "-DCMAKE_INSTALL_PREFIX=/home/orkhan/Orkhan1524/workspace/projects/lab07/_install/default"
+-- [polly] Used toolchain: Default
+-- The C compiler identification is GNU 11.4.0
+-- The CXX compiler identification is GNU 11.4.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- [hunter] Calculating Toolchain-SHA1
+-- [hunter] Calculating Config-SHA1
+-- [hunter] HUNTER_ROOT: /home/orkhan/projects/hunter
+-- [hunter] [ Hunter-ID: xxxxxxx | Toolchain-ID: 347e47c | Config-ID: 5a7c41e ]
+-- [hunter] GTEST_ROOT: /home/orkhan/projects/hunter/_Base/xxxxxxx/347e47c/5a7c41e/Install (ver.: 1.14.0)
+-- Looking for pthread.h
+-- Looking for pthread.h - found
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/orkhan/Orkhan1524/workspace/projects/lab07/_builds/default
+Execute command: [
+  `cmake`
+  `--build`
+  `/home/orkhan/Orkhan1524/workspace/projects/lab07/_builds/default`
+  `--target`
+  `install`
+  `--`
+]
+[/home/orkhan/Orkhan1524/workspace/projects/lab07]> "cmake" "--build" "/home/orkhan/Orkhan1524/workspace/projects/lab07/_builds/default" "--target" "install" "--"
+[ 25%] Building CXX object CMakeFiles/print.dir/sources/print.cpp.o
+[ 50%] Linking CXX static library libprint.a
+[ 50%] Built target print
+[ 75%] Building CXX object CMakeFiles/demo.dir/demo/main.cpp.o
+[100%] Linking CXX executable demo
+[100%] Built target demo
+Install the project...
+-- Install configuration: ""
+-- Installing: /home/orkhan/Orkhan1524/workspace/projects/lab07/_install/default/lib/libprint.a
+-- Installing: /home/orkhan/Orkhan1524/workspace/projects/lab07/_install/default/include
+-- Installing: /home/orkhan/Orkhan1524/workspace/projects/lab07/_install/default/include/print.hpp
+-- Installing: /home/orkhan/Orkhan1524/workspace/projects/lab07/_install/default/cmake/print-config.cmake
+-- Installing: /home/orkhan/Orkhan1524/workspace/projects/lab07/_install/default/cmake/print-config-noconfig.cmake
+-- Installing: /home/orkhan/Orkhan1524/workspace/projects/lab07/_install/default/bin/demo
